@@ -31,7 +31,7 @@ class Users(Resource):
 @api.route('/user/<string:id>')
 class Users(Resource):
 
-    @api.doc(responses={404: 'Not Found'})
+    @api.doc(responses={404: 'Not Found', 200: 'Success'})
     def get(self, id):
         output = [user for user in NAMES if user['id'] == id or str(user['id']) == id]
         if output != []:
