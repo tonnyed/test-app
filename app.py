@@ -33,7 +33,10 @@ class Users(Resource):
 
     def get(self, id):
         output = [user for user in NAMES if user['id'] == id or str(user['id']) == id]
-        return output[0]
+        if output != []:
+            return output[0]
+        else:
+            api.abort(404, "Id {} doesn't exist".format(id))
 
 
 @api.route('/city/<string:city>/users')
