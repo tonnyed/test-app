@@ -17,3 +17,6 @@ We don't want you to spend more than an hour on this, and we especially don't wa
 
 Please also see LEGAL.md and LICENSE.md for information related to this application.
 
+## Obligatory warning
+
+This code should *not* be used for production purposes. The code is provided without warranty.
