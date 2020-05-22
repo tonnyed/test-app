@@ -4,7 +4,7 @@ The BPDTS API for code tests.
 
 We run this API at https://bpdts-test-app.herokuapp.com/ for code tests for developers and testers. We also host this repository for deployment as part of tech tests for devops.
 
-==If you're a here because of a tech test==
+## If you're a here because of a tech test
 
 Please do the following:
 
