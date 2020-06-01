@@ -15,6 +15,8 @@ Send us a link to the deployment and/or the document you've generated.
 
 We don't want you to spend more than an hour on this, and we especially don't want you to run up any bills paying for hosting for a deployment. If you are not 100% sure that it won't cost you anything to deploy it, please *do not* do so.
 
+We repeat - we take absolutely NO responsibility for ANY cost incurred as a result of deploying this application. If you believe that there is ANY chance of incurring personal costs in doing so, please use option 2 above.
+
 Please also see LEGAL.md and LICENSE.md for information related to this application.
 
 ## Obligatory warning
