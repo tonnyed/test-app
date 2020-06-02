@@ -17,7 +17,7 @@ We don't want you to spend more than an hour on this, and we especially don't wa
 
 We repeat - we take absolutely NO responsibility for ANY cost incurred as a result of deploying this application. If you believe that there is ANY chance of incurring personal costs in doing so, please use option 2 above.
 
-Please also see LEGAL.md and LICENSE.md for information related to this application.
+Please also see LICENSE.md for information related to this application.
 
 ## Obligatory warning
 
