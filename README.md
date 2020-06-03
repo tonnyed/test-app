@@ -11,6 +11,8 @@ Please do the following:
 1) EITHER deploy this code somewhere, then write a brief description of what you've done, and what you'd do given more time and resources. We don't care where you deploy it, we're interested in you demonstrating your fundamental skills.
 2) OR write a short tech document, explaining how you'd deploy this application, and how that would change if you expected it to come under very heavy load, and what you would do if it required access to a database.
 
+There is no need to do the task described under the /instructions endpoint once the application is deployed. That's for non-devops candidates.
+
 Send us a link to the deployment and/or the document you've generated.
 
 We don't want you to spend more than an hour on this, and we especially don't want you to run up any bills paying for hosting for a deployment. If you are not 100% sure that it won't cost you anything to deploy it, please *do not* do so.
