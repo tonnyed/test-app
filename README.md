@@ -8,7 +8,7 @@ We run this API at https://bpdts-test-app.herokuapp.com/ for code tests for deve
 
 Please do the following:
 
-1) EITHER deploy this code somewhere, then write a brief description of what you've done, and what you'd do given more time and resources. We don't care where you deploy it, we're interested in you demonstrating your fundamental skills.
+1) EITHER deploy this code somewhere, then write a brief description of what you've done, and what you'd do given more time and resources. We don't care where or how you deploy it, we're interested in you demonstrating your fundamental skills.
 2) OR write a short tech document, explaining how you'd deploy this application, and how that would change if you expected it to come under very heavy load, and what you would do if it required access to a database.
 
 There is no need to do the task described under the /instructions endpoint once the application is deployed. That's for non-devops candidates.
