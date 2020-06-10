@@ -6,6 +6,8 @@ from flask_restplus import Resource, Api, fields
 app = Flask(__name__)
 api = Api(app)
 
+VERSION = "QA"
+
 with open("names.json") as input_file:
     names_input = input_file.read()
     NAMES = json.loads(names_input)
@@ -15,7 +17,12 @@ with open("names.json") as input_file:
 class Users(Resource):
 
     def get(self):
-        return {"todo": "Build an API which calls this API, and returns people who are listed as either living in "
+        if VERSION == "QA":
+            return {"todo": "Create a short automated test for this API. Check that the data returned by the API is "
+                    "valid, and that ensure that each valid operation can be successfully called for each endpoint. "
+                    "Once you've built the tests, push the answer to Github or Gitlab, and send us a link. "}
+        else:
+            return {"todo": "Build an API which calls this API, and returns people who are listed as either living in "
                         "London, or whose current coordinates are within 50 miles of London. Push the answer to Github,"
                         " and send us a link."}
 
