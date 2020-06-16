@@ -6,7 +6,7 @@ from flask_restplus import Resource, Api, fields
 app = Flask(__name__)
 api = Api(app)
 
-VERSION = "QA"
+VERSION = "DEV"
 
 with open("names.json") as input_file:
     names_input = input_file.read()
