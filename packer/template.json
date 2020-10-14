@@ -1,0 +1,42 @@
+{
+  "variables": {
+    "aws_access_key": "",
+    "aws_secret_key": "",
+    "aws_region": "",
+    "aws_source_ami": "",
+    "ansible_role": "",
+    "builtby": "{{env `USER`}}",
+    "amis_users": "00091983883",
+    "ami_creation_date": "{{isotime \"2020-02-20_150405\"}}",
+    "project": "bdpts"
+},
+  "builders": [{
+    "type": "amazon-ebs",
+    "access_key": "{{user `aws_access_key`}}",
+    "secret_key": "{{user `aws_secret_key`}}",
+    "region": "{{user `aws_region`}}",
+    "source_ami": "{{user `aws_source_ami`}}",
+    "instance_type": "t2.micro",
+    "ssh_username": "centos",
+    "ami_name": "{{user `ami_name_prefix`}}_{{user `ami_creation_date`}}",
+    "user_data_file": "scripts/disable_tty.sh",
+    "launch_block_device_mappings": [{
+      "device_name": "/dev/sda1",
+      "delete_on_termination": true
+    }],
+    "tags": {
+      "packer": "true",
+      "ansible_role": "{{user `ansible_role`}}",
+      "builtby": "{{user `builtby`}}",
+      "ami_name": "{{user `ami_name_prefix`}}_{{user `ami_creation_date`}}",
+      "project": "{{user `project`}}"
+    }
+  }],
+  "provisioners": [
+    {
+      "type": "ansible",
+      "playbook_file": "../automate/{{user `ansible_role`}}.yml",
+      "sftp_command": "/usr/libexec/openssh/sftp-server -e"
+    }
+  ]
+}

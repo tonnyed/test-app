@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve bdpts demo
+After=network.target
+
+[Service]
+User=ec2-user
+Group=nginx
+WorkingDirectory=/home/ec2-user/aws_deploy
+Environment="PATH=/home/user/myproject/myprojectenv/bin"
+ExecStart=/home/user/myproject/myprojectenv/bin/uwsgi --ini flask-uwsg.ini
+
+[Install]
+WantedBy=multi-user.target

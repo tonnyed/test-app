@@ -1,0 +1,4 @@
+{
+    "ami_name_prefix": "bdpts-demo-app",
+    "ansible_role": "bdpts-demo-app"
+}

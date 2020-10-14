@@ -1,0 +1,8 @@
+---
+# defaults file for bdpts-demo-app
+
+flask_root_folder: /opt/flask
+flask_user: centos
+
+flask_package: flask-helloworld
+flask_version: 1.0.0

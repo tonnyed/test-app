@@ -1,0 +1,75 @@
+---
+# tasks file for bdpts-demo-app
+
+
+- name: Create application folder
+  file:
+    state: directory
+    path: "{{ flask_root_folder }}"
+    owner: "{{ flask_user }}"
+    group: "{{ flask_user }}"
+    mode: 0755
+# 
+# - name: Install Flask App
+#   pip:
+#     state: present
+#     requirements: "{{ flask_root_folder }}/requirements.txt"
+#     version: "{{ flask_version }}"
+#     virtualenv_python: python3.7
+#     virtualenv: "{{ flask_root_folder }}/.venv"
+#   environment:
+#     PYTHONIOENCODING: utf8
+#
+# - name: Install project requirements
+#   pip:
+#     state: latest
+#     requirements: "{{ project_path }}/requirements/base.txt"
+#     virtualenv: "{{ venv_path }}"
+#     virtualenv_python: python3.6
+#     virtualenv_command: /usr/local/bin/virtualenv
+#
+# # uWSGI configuration
+#
+# - name: Deploy uWSGI ini configuration
+#   template:
+#     src: flask-uwsgi.ini.j2
+#     dest: /etc/uwsgi/apps-available/flask.ini
+#     owner: root
+#     group: root
+#     mode: 0644
+#   notify:
+#     - Reload Emperor
+#
+# - name: Symlink uWSGI ini configuration
+#   file:
+#     state: link
+#     src: /etc/uwsgi/apps-available/flask.ini
+#     dest: /etc/uwsgi/apps-enabled/flask.ini
+#     owner: root
+#     group: root
+#     mode: 0644
+#   notify:
+#     - Reload Emperor
+#
+# # Nginx configuration
+#
+# - name: Deploy Nginx configuration
+#   template:
+#     src: flask-nginx.j2
+#     dest: /etc/nginx/sites-available/flask
+#     owner: root
+#     group: root
+#     mode: 0644
+#   notify:
+#     - Reload Nginx
+#
+# - name: Symlink uWSGI ini configuration
+#   file:
+#     state: link
+#     src: /etc/nginx/sites-available/flask
+#     dest: /etc/nginx/sites-enabled/flask
+#     owner: root
+#     group: root
+#     mode: 0644
+#   notify:
+#     - Reload Nginx
